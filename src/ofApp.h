@@ -33,7 +33,7 @@ class ofApp : public ofBaseApp{
 		bool showGuide;
 
 		//ofVideoGrabber _mov;
-		ofVideoPlayer 		fingerMovie;
+		ofVideoPlayer 		moviePlayer;
 
 		//void load(std::string movie);
 		//ofRectangle getBarRectangle() const;

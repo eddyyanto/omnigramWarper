@@ -2,25 +2,18 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	// source movie
-	//_mov.initGrabber(640, 360);
+	ofSetWindowTitle("Omnigram Warper");
 
 	first_fbo.allocate(1920, 1080);
-	//second_fbo.allocate(1920, 1080);
-	//third_fbo.allocate(1920, 1080);
-	//fourth_fbo.allocate(1920, 1080);
 
 	bezManager.setup(10); //WarpResolution
 	bezManager.addFbo(&first_fbo);
-	//bezManager.addFbo(&second_fbo);
-	//bezManager.addFbo(&third_fbo);
-	//bezManager.addFbo(&fourth_fbo);
 
 	bezManager.loadSettings();
 
-	fingerMovie.load("movies/pexels-tripaway-day-7031954-1080p.mp4");
-	fingerMovie.setLoopState(OF_LOOP_NORMAL);
-	fingerMovie.play();
+	moviePlayer.load("movies/pexels-tripaway-day-7031954-1080p.mp4");
+	moviePlayer.setLoopState(OF_LOOP_NORMAL);
+	moviePlayer.play();
 
 	// Load a movie file
 	//load("movies/pexels-tripaway-day-7031954.mov");
@@ -31,9 +24,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	// movie update
-	//_mov.update();
-	fingerMovie.update();
+	moviePlayer.update();
 
 		// Show or hide the cursor and position bar
 	//if (ofGetSystemTimeMillis() - lastMovement < 3000)
@@ -62,8 +53,7 @@ void ofApp::draw(){
 
 	// update fbo //////////////////////
 	first_fbo.begin();
-	//_mov.draw(0, 0, 1920, 1080);
-	fingerMovie.draw(0, 0);
+	moviePlayer.draw(0, 0);
 
 
 	//if (player.isLoaded())
@@ -101,19 +91,6 @@ void ofApp::draw(){
 
 
 	first_fbo.end();
-
-	//second_fbo.begin();
-	//_mov.draw(0, 0, 1920, 1080);
-	//second_fbo.end();
-
-	//third_fbo.begin();
-	//_mov.draw(0, 0, 1920, 1080);
-	//third_fbo.end();
-
-	//fourth_fbo.begin();
-	//_mov.draw(0, 0, 1920, 1080);
-	//fourth_fbo.end();
-	/////////////////////////////////////
 
 	// draw bezier
 	bezManager.draw();
