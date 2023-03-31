@@ -1,0 +1,3 @@
+ofxBezierWarpManager
+ofxHapPlayer
+ofxXmlSettings
