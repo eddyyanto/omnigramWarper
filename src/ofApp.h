@@ -31,15 +31,11 @@ class ofApp : public ofBaseApp{
 		ofFbo fourth_fbo;
 
 		bool showGuide;
-
-		//ofVideoGrabber _mov;
-		ofVideoPlayer 		moviePlayer;
-
-		//void load(std::string movie);
-		//ofRectangle getBarRectangle() const;
-		//ofxHapPlayer player;
-		//uint64_t lastMovement;
-		//bool wasPaused;
-		//bool drawBar;
-		//bool inScrub;
+		void load(std::string movie);
+		ofRectangle getBarRectangle() const;
+		ofxHapPlayer player;
+		uint64_t lastMovement;
+		bool wasPaused;
+		bool drawBar;
+		bool inScrub;
 };
