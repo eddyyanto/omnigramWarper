@@ -12,6 +12,7 @@ Video files are stored in /bin/data folder
 - Right click the control point : Toggle bezier/homoglaphy mode.
 - Arrow key			: Move Corners/Anchors. (selected control point)
 - [SPACEBAR] key	: Play/pause
+- [H] key			: Show/hide help text
 
 ## Dependencies
 - ofxXmlSetings

@@ -24,13 +24,8 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		ofxBezierWarpManager bezManager;
-
 		ofFbo first_fbo;
-		ofFbo second_fbo;
-		ofFbo third_fbo;
-		ofFbo fourth_fbo;
 
-		bool showGuide;
 		void load(std::string movie);
 		ofRectangle getBarRectangle() const;
 		ofxHapPlayer player;
@@ -38,4 +33,5 @@ class ofApp : public ofBaseApp{
 		bool wasPaused;
 		bool drawBar;
 		bool inScrub;
+		bool showHelp;
 };
